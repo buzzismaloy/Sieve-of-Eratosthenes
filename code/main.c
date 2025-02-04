@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-void SieveOfEratoshenes(int n) {
+void SieveOfEratosthenes(int n) {
 	if (n < 2) {
 		printf("\n\nThe N must be >= 2!!!\n");
 		return;
@@ -14,7 +14,7 @@ void SieveOfEratoshenes(int n) {
 		return;
 	}
 
-	for (int i = 0; i  < n / 2; ++i) {
+	for (int i = 0; i < n / 2; ++i) {
 		is_prime[i] = true;
 	}
 	printf("\nPrime numbers up to %d:\n2 ", n);
@@ -43,10 +43,10 @@ int main() {
 	int scan_res = scanf("%d", &n);
 	if (scan_res != 1) {
 		printf("\n\nInvalid input!\n");
-		return 0;
+		return 1;
 	}
 
-	SieveOfEratoshenes(n);
+	SieveOfEratosthenes(n);
 
 	return 0;
 }
