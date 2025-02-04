@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 void SieveOfEratoshenes(int n) {
 	if (n < 2) {
@@ -7,33 +8,33 @@ void SieveOfEratoshenes(int n) {
 		return;
 	}
 
-	int *sieve = (int*)malloc((n + 1) * sizeof(int));
-	if (!sieve) {
+	bool *is_prime = (bool*)malloc((n / 2) * sizeof(bool));
+	if (!is_prime) {
 		printf("Memory allocation failed!\n");
 		return;
 	}
-	sieve[0] = sieve[1] = -1; // 0 & 1 are neither prime nor composite numbers
-	for (int i = 2; i  <= n; ++i) {
-		sieve[i] = 1; // init any other number as prime
-	}
 
-	for (int i = 2; i * i <= n; ++i) {
-		if (sieve[i]) {
-			for (int mult = i * i; mult <= n; mult += i) {
-				sieve[mult] = 0;
+	for (int i = 0; i  < n / 2; ++i) {
+		is_prime[i] = true;
+	}
+	printf("\nPrime numbers up to %d:\n2 ", n);
+
+	for (int i = 3; i * i <= n; i += 2) {
+		if (is_prime[i / 2]) {
+			for (int mult = i * i; mult <= n; mult += 2 * i) {
+				is_prime[mult / 2] = false;
 			}
 		}
 	}
 
-	printf("\nPrime numbers up to %d:\n", n);
-	for (int i = 2; i <=n; ++i) {
-		if (sieve[i]) {
-			printf("%d ", i);
+	for (int i = 1; i < n / 2; ++i) {
+		if (is_prime[i]) {
+			printf("%d ", 2 * i + 1);
 		}
 	}
 	printf("\n\n");
 
-	free(sieve);
+	free(is_prime);
 }
 
 int main() {
