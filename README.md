@@ -24,25 +24,25 @@ cd Sieve-of-Eratosthenes/code
 ```
 3. Compile and run:
 
-* C:
+### C
 
 ```bash
 gcc main.c -o main
 ./main
 ```
-* C++:
+### C++
 
 ```bash
 g++ main.cpp -o main
 ./main
 ```
-* Java:
+### Java
 
 ```bash
 javac Sieve.java
 java Sieve
 ```
-* Python:
+### Python
 
 ```bash
 python3 main.py
