@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <sstream>
 
 void SieveOfEratosthenes(int n) {
 	if (n < 2) {
@@ -8,11 +9,12 @@ void SieveOfEratosthenes(int n) {
 	}
 
 	int size = (n + 1) / 2;
+	std::ostringstream output;
 	std::unique_ptr<bool[]> is_prime = std::make_unique<bool[]>(size);
 	for (int i = 0; i < size; ++i) {
 		is_prime[i] = true;
 	}
-	std::cout << "\nPrime numbers up to " << n << ":\n2 ";
+	output << "\nPrime numbers up to " << n << ":\n2 ";
 
 	for (int i = 3; i * i <= n; i += 2) {
 		if (is_prime[i / 2]) {
@@ -24,10 +26,10 @@ void SieveOfEratosthenes(int n) {
 
 	for (int i = 1; i < size; ++i) {
 		if (is_prime[i]) {
-			std::cout << 2 * i + 1 << ' ';
+			output << 2 * i + 1 << ' ';
 		}
 	}
-	std::cout << "\n\n";
+	std::cout << output.str() << "\n\n";
 }
 
 int main() {
