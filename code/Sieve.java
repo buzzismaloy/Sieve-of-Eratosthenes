@@ -14,7 +14,7 @@ class Sieve {
 			isPrime[i] = true;
 		}
 
-		System.out.println("\nPrime numbers up to " + n + ":\n2 ");
+		System.out.print("\nPrime numbers up to " + n + ":\n2 ");
 
         for (int i = 3; i * i <= n; i += 2) {
 			if (isPrime[i / 2]) {
