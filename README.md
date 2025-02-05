@@ -20,12 +20,32 @@ https://github.com/buzzismaloy/Sieve-of-Eratosthenes.git
 ```
 2. Go to the directory:
 ```bash
-cd Sieve-of-Eratosthenes
+cd Sieve-of-Eratosthenes/code
 ```
 3. Compile and run:
+
+* C:
+
 ```bash
 gcc main.c -o main
 ./main
+```
+* C++:
+
+```bash
+g++ main.cpp -o main
+./main
+```
+* Java:
+
+```bash
+javac Sieve.java
+java Sieve
+```
+* Python:
+
+```bash
+python3 main.py
 ```
 
 ## See also
