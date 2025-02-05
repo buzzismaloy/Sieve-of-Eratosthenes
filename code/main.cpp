@@ -7,8 +7,9 @@ void SieveOfEratosthenes(int n) {
 		return;
 	}
 
-	std::unique_ptr<bool[]> is_prime = std::make_unique<bool[]>(n / 2);
-	for (int i = 0; i < n / 2; ++i) {
+	int size = (n + 1) / 2;
+	std::unique_ptr<bool[]> is_prime = std::make_unique<bool[]>(size);
+	for (int i = 0; i < size; ++i) {
 		is_prime[i] = true;
 	}
 	std::cout << "\nPrime numbers up to " << n << ":\n2 ";
@@ -21,7 +22,7 @@ void SieveOfEratosthenes(int n) {
 		}
 	}
 
-	for (int i = 1; i < n / 2; ++i) {
+	for (int i = 1; i < size; ++i) {
 		if (is_prime[i]) {
 			std::cout << 2 * i + 1 << ' ';
 		}

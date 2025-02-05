@@ -8,13 +8,14 @@ void SieveOfEratosthenes(int n) {
 		return;
 	}
 
-	bool *is_prime = (bool*)malloc((n / 2) * sizeof(bool));
+	int size = (n + 1) / 2;
+	bool *is_prime = (bool*)malloc(size * sizeof(bool));
 	if (!is_prime) {
 		printf("Memory allocation failed!\n");
 		return;
 	}
 
-	for (int i = 0; i < n / 2; ++i) {
+	for (int i = 0; i < size; ++i) {
 		is_prime[i] = true;
 	}
 	printf("\nPrime numbers up to %d:\n2 ", n);
@@ -27,7 +28,7 @@ void SieveOfEratosthenes(int n) {
 		}
 	}
 
-	for (int i = 1; i < n / 2; ++i) {
+	for (int i = 1; i < size; ++i) {
 		if (is_prime[i]) {
 			printf("%d ", 2 * i + 1);
 		}
