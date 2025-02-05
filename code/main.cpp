@@ -34,7 +34,7 @@ void SieveOfEratosthenes(int n) {
 
 int main() {
 	int n;
-	std::cout << "Enter N:\n>";
+	std::cout << "Enter N:\n> ";
 	if (!(std::cin >> n)) {
 		std::cerr << "\n\nInvalid input!\nExiting...\n";
 		return 1;

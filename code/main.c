@@ -40,7 +40,7 @@ void SieveOfEratosthenes(int n) {
 
 int main() {
 	int n;
-	printf("Enter N:\n>");
+	printf("Enter N:\n> ");
 	int scan_res = scanf("%d", &n);
 	if (scan_res != 1) {
 		printf("\n\nInvalid input!\n");
