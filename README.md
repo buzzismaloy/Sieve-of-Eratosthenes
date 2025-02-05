@@ -14,35 +14,35 @@ The sieve of Eratosthenes is an ancient algorithm for finding all prime numbers 
 
 ## Run program
 
-1. Clone git repository:
+### Clone git repository:
 ```bash
 https://github.com/buzzismaloy/Sieve-of-Eratosthenes.git
 ```
-2. Go to the directory:
+### Go to the directory:
 ```bash
 cd Sieve-of-Eratosthenes/code
 ```
-3. Compile and run:
+### Compile and run:
 
-### C
+#### C
 
 ```bash
 gcc main.c -o main
 ./main
 ```
-### C++
+#### C++
 
 ```bash
 g++ main.cpp -o main
 ./main
 ```
-### Java
+#### Java
 
 ```bash
 javac Sieve.java
 java Sieve
 ```
-### Python
+#### Python
 
 ```bash
 python3 main.py
