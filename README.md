@@ -47,6 +47,11 @@ java Sieve
 ```bash
 python3 main.py
 ```
+#### Ruby
+
+```bash
+ruby main.rb
+```
 
 ## See also
 
