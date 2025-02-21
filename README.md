@@ -52,6 +52,13 @@ python3 main.py
 ```bash
 ruby main.rb
 ```
+#### Rust
+
+```bash
+rustc main.rs -o main
+./main
+```
+
 
 ## See also
 
