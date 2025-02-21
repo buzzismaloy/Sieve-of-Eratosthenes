@@ -38,6 +38,7 @@ class Sieve {
 
 		if (!scanner.hasNextInt()) {
 			System.out.println("\n\nInvalid input!\n");
+			scanner.close();
 			return;
 		}
 
